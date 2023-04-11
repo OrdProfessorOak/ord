@@ -5,7 +5,7 @@
 //! Bitcoin transactions.
 //!
 //! This module contains a `TransactionBuilder` struct that facilitates
-//! constructing ordinal-aware transactions that take these additionalr
+//! constructing ordinal-aware transactions that take these additional
 //! conditions into account.
 //!
 //! The external interfaces are
@@ -114,9 +114,9 @@ type Result<T> = std::result::Result<T, Error>;
 impl TransactionBuilder {
   const ADDITIONAL_INPUT_VBYTES: usize = 58;
   const ADDITIONAL_OUTPUT_VBYTES: usize = 43;
-  const MAX_POSTAGE: Amount = Amount::from_sat(2 * 1_000);
+  const MAX_POSTAGE: Amount = Amount::from_sat(2 * 1_337);
   const SCHNORR_SIGNATURE_SIZE: usize = 64;
-  pub(crate) const TARGET_POSTAGE: Amount = Amount::from_sat(1_000);
+  pub(crate) const TARGET_POSTAGE: Amount = Amount::from_sat(1_337);
 
   pub fn build_transaction_with_postage(
     outgoing: SatPoint,
